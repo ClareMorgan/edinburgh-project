@@ -1,0 +1,15 @@
+:root {
+  --heading-font: "UnifrakturMaguntia", cursive;
+  --primary-font: "Libre Baskerville", serif;
+}
+
+h1 {
+  font-family: var(--heading-font);
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 144px;
+  text-align: left;
+}
+p {
+  font-family: var(--primary-font);
+}
