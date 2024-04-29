@@ -4,16 +4,18 @@
   --primary-font-color: #2a2438;
   --mid-color: #5c5470;
   --light-color: #f0eff2;
+  --accent-color: #ffe1d3;
 }
 body {
   background: #352f44;
+  font-family: var(--primary-font);
 }
 header {
   background-image: linear-gradient(
-      rgba(42, 36, 56, 0.7),
-      rgba(42, 36, 56, 0.7)
+      rgba(53, 47, 68, 0.7),
+      rgba(53, 47, 68, 0.7)
     ),
-    url("../images/edinburgh-landscape.jpg");
+    url("../images/edinburgh-header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -27,6 +29,9 @@ header h1 {
   color: var(--light-color);
 }
 header .hero-btn {
+  letter-spacing: 1px;
+  text-align: center;
+  color: var(--light-color);
   background: var(--mid-color);
   display: block;
   margin: 80px auto;
@@ -37,36 +42,94 @@ header .hero-btn {
 }
 header .hero-btn:hover {
   color: var(--primary-font-color);
-  background: var(--light-color);
+  background: var(--accent-color);
 }
-h2,
-h3,
-.hero-btn {
-  letter-spacing: 1px;
+header h2,
+header h3 {
   text-align: center;
-  font-family: var(--primary-font);
   color: var(--light-color);
 }
-h3 i {
+header h3 i {
   font-size: 12px;
 }
+section {
+  padding: 100px;
+  margin: 0;
+}
+footer {
+  background-image: linear-gradient(
+      rgba(53, 47, 68, 0.9),
+      rgba(53, 47, 68, 0.9)
+    ),
+    url("../images/edinburgh-footer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: var(--light-color);
+}
+footer h3,
+footer p {
+  opacity: 0.8;
+}
+footer h3 {
+  font-size: 20px;
+}
+footer p,
+footer li {
+  font-size: 16px;
+}
+footer ul {
+  padding: 0;
+}
+footer li {
+  list-style: none;
+  opacity: 0.8;
+  transition: all 200ms ease;
+}
+footer a {
+  color: var(--accent-color);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: all 200ms ease;
+}
+footer li:hover,
+footer p a:hover {
+  opacity: 1;
+}
+footer .footer-grid {
+  grid-template-columns: 1fr 2fr 2fr;
+}
 .container {
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
 }
+.grid {
+  display: grid;
+  grid-gap: 64px;
+}
+@media (max-width: 400px) {
+  header h1 {
+    font-size: 64px !important;
+  }
+}
 @media (max-width: 768px) {
-  header {
-    padding: 60px 10px;
+  header,
+  section {
+    padding: 60px 30px;
   }
   header h1 {
     font-size: 78px;
     line-height: 1;
-    padding: 10px;
+    padding: 10px 0;
   }
   header h2 {
     font-size: 20px;
   }
   header .hero-btn {
     margin: 40px auto;
+  }
+  footer .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
   }
 }
