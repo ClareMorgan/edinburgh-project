@@ -1,10 +1,12 @@
 :root {
   --heading-font: "UnifrakturMaguntia", cursive;
   --primary-font: "Libre Baskerville", serif;
-  --primary-font-color: #2a2438;
+  --primary-font-color: #352f44;
+  --light-font-color: #f0eff2;
   --mid-color: #5c5470;
-  --light-color: #f0eff2;
-  --accent-color: #ffe1d3;
+  --light-color: #dbd8e3;
+  --accent-light-color: #ffe1d3;
+  --accent-dark-color: #dc7646;
 }
 body {
   background: #352f44;
@@ -26,12 +28,12 @@ header h1 {
   font-size: 96px;
   line-height: 1.2;
   text-align: center;
-  color: var(--light-color);
+  color: var(--light-font-color);
 }
 header .hero-btn {
   letter-spacing: 1px;
   text-align: center;
-  color: var(--light-color);
+  color: var(--light-font-color);
   background: var(--mid-color);
   display: block;
   margin: 80px auto;
@@ -42,15 +44,55 @@ header .hero-btn {
 }
 header .hero-btn:hover {
   color: var(--primary-font-color);
-  background: var(--accent-color);
+  background: var(--accent-light-color);
 }
 header h2,
 header h3 {
   text-align: center;
-  color: var(--light-color);
+  color: var(--light-font-color);
+}
+header h3 {
+  text-transform: uppercase;
 }
 header h3 i {
   font-size: 12px;
+}
+main {
+  background: var(--light-color);
+}
+
+main h2,
+main h3,
+main p {
+  color: var(--primary-font-color);
+}
+main h2 {
+  font-size: 40px;
+  line-height: 1;
+}
+main h3 {
+  text-transform: uppercase;
+  font-size: 16px;
+  opacity: 0.5;
+}
+main p {
+  font-size: 16px;
+  line-height: 1.5;
+  opacity: 0.8;
+  padding: 15px 0;
+}
+main a {
+  color: var(--accent-dark-color);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 200ms ease;
+}
+main a:hover {
+  opacity: 1;
+}
+main .grid-2-columns {
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 36px;
 }
 section {
   padding: 100px;
@@ -65,7 +107,7 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  color: var(--light-color);
+  color: var(--light-font-color);
 }
 footer h3,
 footer p {
@@ -87,7 +129,7 @@ footer li {
   transition: all 200ms ease;
 }
 footer a {
-  color: var(--accent-color);
+  color: var(--accent-light-color);
   text-decoration: none;
   opacity: 0.7;
   transition: all 200ms ease;
@@ -112,7 +154,7 @@ footer .footer-grid {
     font-size: 64px !important;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   header,
   section {
     padding: 60px 30px;
@@ -128,8 +170,16 @@ footer .footer-grid {
   header .hero-btn {
     margin: 40px auto;
   }
+  main .grid,
   footer .grid {
     grid-template-columns: 1fr;
     grid-gap: 32px;
+  }
+  main .grid-2-columns {
+    padding-top: 0;
+  }
+  main .image-lg-viewport {
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
