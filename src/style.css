@@ -43,8 +43,8 @@ header .hero-btn {
   transition: all 200ms ease;
 }
 header .hero-btn:hover {
-  color: var(--primary-font-color);
-  background: var(--accent-light-color);
+  color: var(--light-font-color);
+  background: var(--accent-dark-color);
 }
 header h2,
 header h3 {
@@ -66,11 +66,11 @@ main h3,
 main p {
   color: var(--primary-font-color);
 }
-main h2 {
+main h3 {
   font-size: 40px;
   line-height: 1;
 }
-main h3 {
+main h2 {
   text-transform: uppercase;
   font-size: 16px;
   opacity: 0.5;
@@ -94,9 +94,47 @@ main .grid-2-columns {
   grid-template-columns: 1fr 1fr;
   padding-bottom: 36px;
 }
+main .grid-3-columns {
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-bottom: 36px;
+}
+main .secondary-section {
+  background: var(--mid-color);
+}
+main .secondary-section h2,
+main .secondary-section h3 {
+  color: var(--light-font-color);
+  text-align: center;
+}
 section {
   padding: 100px;
   margin: 0;
+}
+.card h4 {
+  font-size: 30px;
+  line-height: 1.5;
+}
+.card-btn {
+  background: var(--mid-color);
+  color: var(--light-font-color);
+  display: block;
+  transition: all 200ms ease;
+}
+.card-btn:hover {
+  background: var(--accent-dark-color);
+  color: var(--light-font-color);
+}
+.card-header.grid {
+  grid-gap: 0;
+  padding: 5px;
+}
+.embed {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 0 5px 5px 0;
+}
+.card img {
+  border-radius: 5px 0 0 5px;
 }
 footer {
   background-image: linear-gradient(
@@ -149,6 +187,10 @@ footer .footer-grid {
   display: grid;
   grid-gap: 64px;
 }
+.image-responsive {
+  width: 100%;
+  display: block;
+}
 @media (max-width: 400px) {
   header h1 {
     font-size: 64px !important;
@@ -181,5 +223,14 @@ footer .footer-grid {
   main .image-lg-viewport {
     max-width: 500px;
     margin: 0 auto;
+  }
+  .card img {
+    display: none;
+  }
+  .embed {
+    aspect-ratio: 16/9;
+    border-radius: 5px;
+  }
+  .card {
   }
 }
