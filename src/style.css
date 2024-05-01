@@ -135,6 +135,7 @@ main .card-btn:hover {
   background: var(--accent-dark-color);
   color: var(--light-font-color);
 }
+
 footer {
   background-image: linear-gradient(
       rgba(53, 47, 68, 0.9),
@@ -190,6 +191,12 @@ footer .footer-grid {
   header h1 {
     font-size: 64px !important;
   }
+  main .secondary-section {
+    padding: 60px 10px !important;
+  }
+  main .instagram-embeds {
+    padding: 60px 0;
+  }
 }
 @media (max-width: 576px) {
   header {
@@ -229,5 +236,15 @@ footer .footer-grid {
   main .embed {
     aspect-ratio: 16/9;
     border-radius: 5px;
+  }
+}
+@media (max-width: 1300px) {
+  main .grid-3-columns {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+  }
+  main .instagram-media {
+    display: block !important;
+    margin: 0 auto !important;
   }
 }
